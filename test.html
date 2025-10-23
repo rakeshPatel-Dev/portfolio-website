@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wave Line Scroll Interaction</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        height: 200vh;
+        background: radial-gradient(circle at top, #0f172a, #020617);
+        overflow-x: hidden;
+      }
+
+      section {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 50vh;
+        overflow: hidden;
+      }
+
+      svg {
+        position: relative;
+        width: 100%;
+        height: 180px;
+      }
+
+      path {
+        fill: transparent;
+        stroke-width: 2.5;
+        opacity: 0.9;
+      }
+
+      /* optional glowing animation */
+      .wave path {
+        filter: drop-shadow(0 0 10px #38bdf8);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 🌊 Wave Section -->
+    <section class="wave">
+      <svg viewBox="0 0 950 200" preserveAspectRatio="none">
+        <path id="wave1" stroke="#38bdf8" d="M 0 100 Q 475 100 950 100"></path>
+        <path id="wave2" stroke="#60a5fa" d="M 0 110 Q 475 110 950 110"></path>
+        <path id="wave3" stroke="#93c5fd" d="M 0 120 Q 475 120 950 120"></path>
+      </svg>
+    </section>
+
+    <script>
+      const waves = [
+        { id: "#wave1", offset: 0 },
+        { id: "#wave2", offset: 0.2 },
+        { id: "#wave3", offset: 0.4 },
+      ];
+
+      let direction = 1; // 1 = forward, -1 = backward
+      let animations = [];
+
+      // 🔁 Function to start looping animation in current direction
+      function startWaveAnimation() {
+        // Kill previous
+        animations.forEach((a) => a.kill());
+        animations = [];
+
+        // Create new for each wave
+        waves.forEach((wave, i) => {
+          const qY1 = direction === 1 ? 50 : 150;
+          const qY2 = direction === 1 ? 150 : 50;
+
+          const anim = gsap
+            .timeline({
+              repeat: -1,
+              yoyo: true,
+              ease: "none",
+              delay: wave.offset,
+            })
+            .to(wave.id, {
+              duration: 1.5,
+              attr: { d: `M 0 100 Q 475 ${qY1} 950 100` },
+            })
+            .to(wave.id, {
+              duration: 1.5,
+              attr: { d: `M 0 100 Q 475 ${qY2} 950 100` },
+            });
+
+          animations.push(anim);
+        });
+      }
+
+      // 🧭 Detect scroll direction
+      let lastScroll = window.scrollY;
+      window.addEventListener("scroll", () => {
+        const currentScroll = window.scrollY;
+        if (currentScroll > lastScroll && direction !== -1) {
+          direction = -1; // Down scroll → backward
+          startWaveAnimation();
+        } else if (currentScroll < lastScroll && direction !== 1) {
+          direction = 1; // Up scroll → forward
+          startWaveAnimation();
+        }
+        lastScroll = currentScroll;
+      });
+
+      // Start initially
+      startWaveAnimation();
+    </script>
+  </body>
+</html>

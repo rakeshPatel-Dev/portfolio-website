@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&family=Monda:wght@400..700&family=Space+Grotesk:wght@300..700&family=Vibur&display=swap");
+
+@import "tailwindcss";
+@tailwind utilities;
+
+/* heading name animation */
+
+.heading span {
+  display: inline-block;
+}
+
+/* Parent section shadow/border */
+section.relative {
+  position: relative;
+  border-radius: 1rem; /* rounded-xl */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* subtle shadow */
+  overflow: hidden;
+  background-color: #f6f7f8; /* default light */
+}
+@media (prefers-color-scheme: dark) {
+  section.relative {
+    background-color: #101922; /* dark mode */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Animated Gradient Background (Diagonal, subtle lightening) */
+.animated-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    #f6f7f8,
+    #ffffff,
+    #f6f7f8
+  ); /* light mode */
+  background-size: 200% 200%;
+  animation: move-bg-diagonal 10s ease-in-out infinite;
+}
+@media (prefers-color-scheme: dark) {
+  .animated-bg {
+    background: linear-gradient(
+      135deg,
+      #192535,
+      #101922,
+      #1f2b3c
+    ); /* dark mode */
+  }
+}
+
+@keyframes move-bg-diagonal {
+  0% {
+    background-position: 0% 0%;
+    transform: scale(1);
+  }
+  50% {
+    background-position: 150% 150%;
+    transform: scale(1.8);
+  }
+  100% {
+    transform: scale(1);
+    background-position: 0% 0%;
+  }
+}
+
+/* Pulsing Radial Circle */
+.radial-circle {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(19, 127, 236, 0.2) 0%,
+    rgba(16, 25, 34, 0.1) 60%
+  );
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.3;
+  }
+}
+
+/* Fade In Up for content */
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+}
+
+/* Floating Badge Animation */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.tab-content {
+  display: none;
+  transition: opacity 0.5s ease-in-out;
+  min-height: 6rem;
+}
+.tab-content.active {
+  display: block;
+  animation: fade-in-up 0.5s ease-out forwards;
+}
+.tab {
+  transition: all 0.3s ease-in-out;
+}
+/* animation for fun section */
+@keyframes pulse-glow {
+  0%,
+  100% {
+    opacity: 0.4;
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+}
+.animate-pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+/* marque animation */
+
+.move {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.marque {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  flex-shrink: 0;
+}
+
+.marque h1 {
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .marque h1 {
+    font-size: 1.5rem;
+  }
+  .marque img {
+    height: 2.5rem;
+  }
+}
