@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class=" scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -84,7 +84,7 @@
     </div>
 
     <!-- Name -->
-    <h1 class="heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg">
+    <h1 class="heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg">
       Rakesh Patel
     </h1>
 
@@ -95,69 +95,75 @@
 
     <!-- Buttons -->
     <div class="flex flex-col sm:flex-row gap-4 mt-6">
-      <button
+      <a href="./pages/Project.html"
         class="flex h-12 w-full sm:w-auto items-center justify-center rounded-lg bg-blue-600 px-6 text-base font-bold text-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl"
       >
         View My Work
-      </button>
-      <button
-        class="flex h-12 w-full sm:w-auto items-center justify-center rounded-lg bg-gray-800/70 px-6 text-base font-bold text-white shadow-lg transition-all hover:bg-gray-700/80 hover:shadow-xl"
+      </a>
+      <a href="/Rakesh Patel CV.pdf" download="Rakesh-patel_CV.pdf"
+        class="download-btn flex h-12 w-full sm:w-auto items-center justify-center rounded-lg bg-gray-800/70 px-6 text-base font-bold text-white shadow-lg transition-all hover:bg-gray-700/80 hover:shadow-xl"
       >
-        Contact Me
-      </button>
+        <i class="ri-download-2-fill mr-2"></i> Download Resume
+      </a>
+    </div>
+  </div>
+  <div id="toastContainer" class="fixed top-5 right-5 flex flex-col gap-2 z-50"></div>
+</section>
+          <!-- about -->
+         <section id="aboutme" class="flex flex-col gap-4 px-4 sm:px-6 md:px-10 lg:px-20 py-8">
+  <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
+    About Me
+  </h2>
+
+  <!-- Tabs -->
+  <nav aria-label="Tabs" class="-mb-px flex items-center justify-center rounded-md py-2 bg-gray-600 dark:bg-gray-800 px-5">
+    <button
+      class="tab active bg-gray-400 dark:bg-gray-700 whitespace-nowrap px-4 py-1 font-medium rounded-lg text-lg text-gray-700 dark:text-gray-300 focus:text-gray-900 dark:focus:text-white"
+      onclick="switchTab(event, 'about')"
+    >
+      About
+    </button>
+    <button
+      class="tab whitespace-nowrap px-4 py-1 font-medium rounded-lg text-lg text-gray-700 dark:text-gray-300 focus:text-gray-900 dark:focus:text-white"
+      onclick="switchTab(event, 'education')"
+    >
+      Education
+    </button>
+  </nav>
+
+  <!-- Tab Contents -->
+  <div class="mt-6">
+    <!-- About -->
+    <div class="tab-content active" id="about">
+      <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
+        I’m a <span class="font-bold text-blue-700">frontend developer</span> and <span class="font-bold text-blue-700">graphic designer</span>. I build websites using <b>HTML</b>, <b>CSS</b>, <b>Tailwind</b>, <b>JavaScript</b>, and <b>React</b>, and create graphics for brands. I enjoy solving problems, learning new tools, and improving my work with each project to make websites and designs practical and easy to use.
+      </p>
+    </div>
+
+    <!-- Education -->
+    <div class="tab-content" id="education">
+      <ul class="space-y-6 text-gray-600 dark:text-gray-300">
+        <li class="flex flex-col gap-2">
+          <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+            Bachelor of Information Technology Management
+            <span class="text-[10px] ml-1.5 animate-pulse text-gray-200 bg-gray-600 border rounded-full px-4 py-0.5">Running</span>
+          </h3>
+          <p class="text-base inline">
+            Institute of Management Studies, 2025 - 2029
+            <span class="text-[10px] ml-1.5 animate-pulse text-gray-200 bg-gray-600 border rounded-full px-4 py-0.5">Expected</span>
+          </p>
+          <p class="text-sm mt-1">
+            Relevant Coursework: Web Application Development, Database Systems & SQL, MIS & Business Analytics, IT Security & Ethical Hacking.
+          </p>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
-          <!-- about -->
-          <section class="flex flex-col gap-4">
-            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
-              About Me
-            </h2>
-            <div>
-            <nav aria-label="Tabs" class="-mb-px flex items-center justify-center rounded-md py-2 bg-gray-600 dark:bg-gray-800 px-5">
-              <button
-                class="tab active bg-gray-400 dark:bg-gray-700 whitespace-nowrap px-4 py-1 font-medium rounded-lg text-lg text-gray-700 dark:text-gray-300    focus:text-gray-900 dark:focus:text-white active:text-gray-900 dark:active:text-white"
-                onclick="switchTab(event, 'about')"
-              >
-                About
-              </button>
-              <button
-                class="tab whitespace-nowrap px-4 py-1 font-medium rounded-lg text-lg text-gray-700 dark:text-gray-300    focus:text-gray-900 dark:focus:text-white active:text-gray-900 dark:active:text-white"
-                onclick="switchTab(event, 'education')"
-              >
-                Education
-              </button>
-            </nav>
 
-    </div>
-    <!-- about -->
-    <div class="mt-6 px-20">
-        <div class="tab-content active" id="about">
-            <p
-            class="text-base text-gray-600 dark:text-gray-300 leading-relaxed"
-            >
-          I’m a <span class="font-bold text-blue-700">frontend developer</span> and <span class="font-bold text-blue-700">graphic designer</span>. I build websites using <b>HTML</b>, <b>CSS</b>, <b>Tailwind</b>, <b>JavaScript</b>, and <b>React</b>, and create graphics for brands. I enjoy solving problems, learning new tools, and improving my work with each project to make websites and designs practical and easy to use.
-          
-        </p>
-    </div>
-    <!-- education -->
-    <div class="tab-content" id="education">
-        <ul class="space-y-6 text-gray-600 dark:text-gray-300">
-            <li class="flex flex-col">
-                <h3
-                class="text-lg font-semibold text-gray-900 dark:text-white"
-                >
-                Bachelor of Information Technology Management <span class="text-[10px] ml-1.5 animate-pulse text-gray-200 bg-gray-600 border rounded-full px-4 py-0.5">Running</span>
-            </h3>
-            <p class="text-base inline">Institute of Management Studies, 2025 - 2029 <span class="text-[10px] ml-1.5 animate-pulse text-gray-200 bg-gray-600 border rounded-full px-4 py-0.5">Expected</span></p>
-            <p class="text-sm mt-1">
-                Relevant Coursework: Web Application Development, Database Systems & SQL, MIS & Business Analytics, IT Security & Ethical Hacking .
-            </p>
-        </li>
-                </ul>
-            </div>
-            </div>
-        </section>
+
+
+
         <!-- gutar line -->
          <div class="relative">
         <div class="container absolute left-0 -top-28 flex items-center justify-center min-h-44 w-full">
@@ -168,7 +174,7 @@
         </div>
 
         <!-- skills -->
-          <section class="flex flex-col gap-4 mt-4 mb-9 ">
+          <section id="skills" class="flex flex-col gap-4 mt-4 mb-9 ">
             <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
               Skills
             </h2>
@@ -266,19 +272,19 @@
           </section>
 
           <!-- project -->
-          <section class="flex flex-col gap-8">
+          <section id="projects" class="flex flex-col gap-8">
             <div class="flex items-center justify-between">
               <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
                 Projects
               </h2>
-              <a href="#" 
+              <a href="./pages/Project.html" 
                 class="flex items-center justify-center dark:bg-gray-800 rounded-lg px-5 text-sm font-bold text-white shadow-lg transition-all dark:hover:bg-gray-700 py-3"
               >
                 View More
               </a>
             </div>
             <!-- card container -->
-            <div class=" parent-container grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="parent-container grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
               <!-- project item will be inserted here by JS -->
             </div>
           </section>
@@ -307,7 +313,7 @@
                 </p>
               
                 <a
-                  href="#"
+                  href="/pages/FunProject.html"
                   class="group flex gap-2 h-12 items-center justify-center rounded-lg bg-blue-600/80 px-8 text-base font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-blue-700/90 animate-float"
                 >
                   <span>Explore Fun Projects</span>
@@ -317,7 +323,7 @@
 
               <!-- contact section -->
 
-            <section class="flex flex-col gap-10 px-4 md:px-10 py-10">
+            <section id="contact" class="flex flex-col gap-10 px-4 md:px-10 py-10">
   <h2 class="text-3xl font-bold text-gray-900 dark:text-white text-center">
     Contact
   </h2>
@@ -446,24 +452,29 @@
               <nav class="inline-flex flex-col gap-2">
                 <a
                   class="text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors inline-block"
-                  href="#"
+                  href="#aboutme"
                   >About</a
                 >
                 <a
                   class="text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors"
-                  href="#"
+                  href="#skills"
                   >Skills</a
                 >
                 <a
                   class="text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors"
-                  href="#"
+                  href="#projects"
                   >Projects</a
                 >
                 <a
                   class="text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors"
-                  href="#"
+                  href="/pages/FunProject.html"
                   >Fun Projects</a
                 >
+                <a
+                  class="download-btn text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors"
+                  href="/Rakesh Patel CV.pdf"
+                  download="Rakesh-patel_CV.pdf"
+                  >Download Resume</a>
               </nav>
             </div>
             <div>
@@ -509,6 +520,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
       ></script>
-      <script src="app.js"></script>
+      <script src="/JavaScript/app.js"></script>
+
+
+<!-- Home page -->
+<script src="/JavaScript/home.js"></script>
+
   </body>
 </html>
