@@ -17,23 +17,37 @@
     class="bg-[#f6f7f8] dark:bg-[#101922] font-[Space Grotesk] text-gray-800 dark:text-gray-200"
   >
     <div
-      class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden"
+      class="relative flex h-auto w-full flex-col overflow-x-hidden"
     >
     <!-- navbar -->
-     <header
-  class="sticky top-0 z-30 flex w-full items-center justify-center whitespace-nowrap border-b border-gray-200/30 dark:border-gray-400/30 bg-white/60 dark:bg-[#101922]/60 px-4 sm:px-10 py-3 backdrop-blur-md shadow-md transition-colors duration-300"
+ <header
+  class="z-30 flex w-full items-center justify-between whitespace-nowrap border-b border-gray-200/30 dark:border-gray-400/30 bg-white/60 dark:bg-[#101922]/60 px-4 sm:px-10 py-3 backdrop-blur-md shadow-md transition-colors duration-300"
 >
-<div class=" flex w-4/6 items-center justify-between ">
-  <div class="flex items-center gap-3">
-    <img src="./assets/image/wlogo.png" alt="Logo" class="h-14 w-14 object-contain"/>
+  <div class="flex items-center ">
+    <img src="/assets/images/logo.png" alt="Logo" class="h-14 w-14 object-contain"/>
   </div>
 
   <!-- Navigation -->
   <nav class="hidden md:flex items-center gap-6">
     <a
       class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
+      href="#skills"
+      >Skills</a
+    >
+    <a
+      class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
+      href="#expNedu"
+      >Exp N Edu</a
+    >
+    <a
+      class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
       href="/pages/Project.html"
       >Projects</a
+    >
+    <a
+      class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
+      href="/pages/FunProject.html"
+      >Fun Kit</a
     >
     <a
       class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
@@ -55,7 +69,6 @@
       <i class="ri-linkedin-fill text-xl font-normal"></i>
     </a>
   </div>
-  </div>
 </header>
 
 
@@ -63,6 +76,7 @@
 
       <main class="flex flex-1 justify-center py-5">
         <div class="flex max-w-5xl flex-1 flex-col gap-12 px-4 sm:px-10">
+          <!-- home section -->
       <section
   class="tilt relative min-h-[520px] flex flex-col items-center justify-center text-center rounded-md overflow-hidden"
   data-tilt
@@ -93,7 +107,7 @@
     </div>
 
     <!-- Name -->
-    <h1 class="heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg translate-z-20">
+    <h1 class="heading text-3xl -ml-6 sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg translate-z-20">
       Rakesh Patel
     </h1>
 
@@ -119,19 +133,27 @@
   <div id="toastContainer" class="fixed top-5 right-5 flex flex-col gap-2 z-50"></div>
 </section>
 
-          <!-- about -->
-         <section id="aboutme" class="flex flex-col gap-4 px-4 sm:px-6 md:px-10 lg:px-20 py-8">
+
+      <!-- about  -->
+      <section class="flex flex-col gap-4">
+      <h2 class="text-2xl font-bold text-gray-900 dark:text-white">About Me</h2>
+      <p class="text-base px-6 text-gray-600 dark:text-gray-300 border-l-4 border-gray-400 pl-4  ">I’m a frontend developer and graphic designer a bit. I build websites using <mark>HTML</mark>, <mark>CSS</mark>, <mark>Tailwind</mark>, <mark>JavaScript</mark>, and <mark></mark>React, and create graphics for brands. I enjoy <mark>solving problems</mark>, <mark>learning new tools</mark>, and improving my work with each project to make websites and designs practical and easy to use.</p>
+      </section>
+
+
+          <!-- experience N education -->
+         <section id="expNedu" class="flex flex-col gap-4 py-8">
   <h2 class="text-2xl font-bold text-gray-900 dark:text-white">
-    About Me
+    Exp & Education
   </h2>
 
   <!-- Tabs -->
   <nav aria-label="Tabs" class="-mb-px flex items-center justify-center rounded-md py-2 bg-gray-600 dark:bg-gray-800 px-5">
     <button
       class="tab active bg-gray-400 dark:bg-gray-700 whitespace-nowrap px-4 py-1 font-medium rounded-lg text-lg text-gray-700 dark:text-gray-300 focus:text-gray-900 dark:focus:text-white"
-      onclick="switchTab(event, 'about')"
+      onclick="switchTab(event, 'experience')"
     >
-      About
+      Experience
     </button>
     <button
       class="tab whitespace-nowrap px-4 py-1 font-medium rounded-lg text-lg text-gray-700 dark:text-gray-300 focus:text-gray-900 dark:focus:text-white"
@@ -144,10 +166,20 @@
   <!-- Tab Contents -->
   <div class="mt-6">
     <!-- About -->
-    <div class="tab-content active" id="about">
-      <p class="text-base text-gray-600 dark:text-gray-300 leading-relaxed">
-        I’m a <span class="font-bold text-blue-700">frontend developer</span> and <span class="font-bold text-blue-700">graphic designer</span>. I build websites using <b>HTML</b>, <b>CSS</b>, <b>Tailwind</b>, <b>JavaScript</b>, and <b>React</b>, and create graphics for brands. I enjoy solving problems, learning new tools, and improving my work with each project to make websites and designs practical and easy to use.
-      </p>
+    <div class="tab-content px-6 active" id="experience">
+          <ul class="space-y-6 text-gray-600 dark:text-gray-300">
+            <li class="flex flex-col gap-2">
+              <h3 class="text-xl font-bold text-gray-900 dark:text-white">
+                Frontend Developer Intern
+              </h3>
+              <p class="text-base flex flex-col sm:flex-row justify-between font-bold relative">
+                Ghardailo Dugdh Dairy Co. <span class="mt-2 sm:mt-0 px-4 py-2 text-[12px] -top-4 right-0 font-semibold bg-gray-800"> May 2025 - Present</span>  
+              </p>
+              <p class="text-sm mt-1 border-l-4 border-gray-400 pl-4">
+                Worked on developing and maintaining the company's website using <mark> HTML </mark>,<mark> CSS</mark>, and <mark> JavaScript</mark>. Collaborated with the design team to implement <mark> responsive designs</mark> and enhance user experience.
+              </p>
+            </li>
+          </ul>
     </div>
 
     <!-- Education -->
@@ -155,21 +187,21 @@
       <ul class="space-y-6 text-gray-600 dark:text-gray-300">
         <li class="flex flex-col gap-2">
           <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-            Bachelor of Information Technology Management
+            Bachelor of <mark>Information Technology</mark> Management
             <span class="text-[10px] ml-1.5 animate-pulse text-gray-200 bg-gray-600 border rounded-full px-4 py-0.5">Running</span>
           </h3>
           <p class="text-base inline">
             Institute of Management Studies, 2025 - 2029
             <span class="text-[10px] ml-1.5 animate-pulse text-gray-200 bg-gray-600 border rounded-full px-4 py-0.5">Expected</span>
           </p>
-          <p class="text-sm mt-1">
+          <p class="text-sm mt-1 border-l-4 border-gray-400 pl-4">
             Relevant Coursework: Web Application Development, Database Systems & SQL, MIS & Business Analytics, IT Security & Ethical Hacking.
           </p>
         </li>
       </ul>
     </div>
   </div>
-</section>
+          </section>
 
 
 
@@ -189,10 +221,10 @@
               Skills
             </h2>
             <!-- items -->
-            <div class="grid grid-cols-2 gap-4 scale-75 sm:grid-cols-2 sm:scale-100 lg:grid-cols-4">
+            <div class="grid grid-cols-2 gap-6 scale-75 sm:grid-cols-2 sm:scale-100 lg:scale-100 md:scale-100 lg:grid-cols-4">
               <!-- HTML -->
               <div data-tilt data-tilt-scale="1.1"
-                class="card flex flex-col items-center justify-center gap-1 rounded-xl border border-[#e44d26]/40 bg-white/10 backdrop-blur-md dark:bg-[#e44d26]/10 py-3 transition-all duration-500 transform cursor-pointer"
+                class="card flex flex-col items-center justify-center gap-1 rounded-xl border hover:border-[#e44d26]/40 bg-gray-800 border-gray-500 hover:shadow-2xl backdrop-blur-md hover:dark:bg-[#e44d26]/10 py-3 transition-all duration-500 transform cursor-pointer hover:scale-105 hover:-translate-y-2" 
               >
                 <div class="flex flex-row items-center justify-center gap-3">
                   <div class="text-[#e44d26] text-2xl"><i class="ri-html5-fill"></i></div>
@@ -203,7 +235,7 @@
 
               <!-- CSS -->
               <div data-tilt data-tilt-scale="1.1"
-                class="flex flex-col items-center justify-center gap-1 rounded-xl border border-[#264de4]/40 bg-white/10 backdrop-blur-md dark:bg-[#264de4]/10 py-3 transition-all duration-500 transform  cursor-pointer"
+                class="flex flex-col items-center justify-center gap-1 rounded-xl border hover:border-[#264de4]/40 bg-gray-800 border-gray-500 backdrop-blur-md hover:dark:bg-[#264de4]/10 py-3 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer"
               >
                 <div class="flex flex-row items-center justify-center gap-3">
                   <div class="text-[#264de4] text-2xl"><i class="ri-css3-fill"></i></div>
@@ -214,7 +246,7 @@
 
               <!-- JavaScript -->
               <div data-tilt data-tilt-scale="1.1"
-                class="flex flex-col items-center justify-center gap-1 rounded-xl border border-[#f7df1e]/40 bg-white/10 backdrop-blur-md dark:bg-[#f7df1e]/10 py-3 transition-all duration-500 transform cursor-pointer"
+                class="flex flex-col items-center justify-center gap-1 rounded-xl border hover:border-[#f7df1e]/40 bg-gray-800 border-gray-500 backdrop-blur-md hover:dark:bg-[#f7df1e]/10 py-3 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer"
               >
                 <div class="flex flex-row items-center justify-center gap-3">
                   <div class="text-[#f7df1e] text-2xl"><i class="ri-javascript-fill"></i></div>
@@ -225,7 +257,7 @@
 
               <!-- Tailwind -->
               <div data-tilt data-tilt-scale="1.1"
-                class="flex flex-col items-center justify-center gap-1 rounded-xl border border-[#38bdf8]/40 bg-white/10 backdrop-blur-md dark:bg-[#38bdf8]/10 py-3 transition-all duration-500 transform  cursor-pointer"
+                class="flex flex-col items-center justify-center gap-1 rounded-xl border hover:border-[#38bdf8]/40 bg-gray-800 border-gray-500 backdrop-blur-md hover:dark:bg-[#38bdf8]/10 py-3 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2  cursor-pointer"
               >
                 <div class="flex flex-row items-center justify-center gap-3">
                   <div class="text-[#38bdf8] text-2xl"><i class="ri-tailwind-css-fill"></i></div>
@@ -236,7 +268,7 @@
 
               <!-- React -->
               <div data-tilt data-tilt-scale="1.1"
-                class="flex flex-col items-center justify-center gap-1 rounded-xl border border-[#61dafb]/40 bg-white/10 backdrop-blur-md dark:bg-[#61dafb]/10 py-3 transition-all duration-500 transform  cursor-pointer"
+                class="flex flex-col items-center justify-center gap-1 rounded-xl border hover:border-[#61dafb]/40 bg-gray-800 border-gray-500 backdrop-blur-md hover:dark:bg-[#61dafb]/10 py-3 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2  cursor-pointer"
               >
                 <div class="flex flex-row items-center justify-center gap-3">
                   <div class="text-[#61dafb] text-2xl"><i class="fa-brands fa-react"></i></div>
@@ -247,7 +279,7 @@
 
               <!-- Git -->
               <div data-tilt data-tilt-scale="1.1"
-                class="flex flex-col items-center justify-center gap-1 rounded-xl border border-[#f34f29]/40 bg-white/10 backdrop-blur-md dark:bg-[#f34f29]/10 py-3 transition-all duration-500 transform cursor-pointer"
+                class="flex flex-col items-center justify-center gap-1 rounded-xl border hover:border-[#f34f29]/40 bg-gray-800 border-gray-500 backdrop-blur-md hover:dark:bg-[#f34f29]/10 py-3 transition-all duration-500 transform  hover:scale-105 hover:-translate-y-2 cursor-pointer"
               >
                 <div class="flex flex-row items-center justify-center gap-3">
                   <div class="text-[#f34f29] text-2xl"><i class="fa-brands fa-git-alt"></i></div>
@@ -258,7 +290,7 @@
 
               <!-- GitHub -->
               <div data-tilt data-tilt-scale="1.1"
-                class="flex flex-col items-center justify-center gap-1 rounded-xl border border-[#333]/40 bg-white/10 backdrop-blur-md dark:bg-[#333]/30 py-3 transition-all duration-500 transform  cursor-pointer"
+                class="flex flex-col items-center justify-center gap-1 rounded-xl border hover:border-[#333]/40 bg-gray-800 border-gray-500 backdrop-blur-md hover:dark:bg-[#333]/30 py-3 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer"
               >
                 <div class="flex flex-row items-center justify-center gap-3">
                   <div class="text-[#333] dark:text-white text-2xl"><i class="ri-github-fill"></i></div>
@@ -269,7 +301,7 @@
 
               <!-- Figma -->
               <div data-tilt data-tilt-scale="1.1"
-                class="flex flex-col items-center justify-center gap-1 rounded-xl border border-[#a259ff]/40 bg-white/10 backdrop-blur-md dark:bg-[#a259ff]/10 py-3 transition-all duration-500 transform  cursor-pointer"
+                class="flex flex-col items-center justify-center gap-1 rounded-xl border hover:border-[#a259ff]/40 bg-gray-800 border-gray-500 backdrop-blur-md hover:dark:bg-[#a259ff]/10 py-3 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 cursor-pointer"
               >
                 <div class="flex flex-row items-center justify-center gap-3">
                   <div class="text-[#a259ff] text-2xl"><i class="ri-figma-fill"></i></div>

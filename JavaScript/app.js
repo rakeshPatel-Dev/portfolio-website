@@ -38,7 +38,7 @@ gsap.from(".b", {
    stagger:-0.2
 })
 
-// tab switching for about section
+// tab switching for experience section
 
 function switchTab(event, tabId) {
   event.preventDefault();
@@ -96,7 +96,7 @@ containers.forEach(container => {
 // ---------------- Project Data ----------------
 const projects = [
   {
-    image: '/assets/image/Call Reminder App.png',
+    image: '/assets/images/reminder app.webp',
     title: 'Call Reminder App',
     description: 'A sleek frontend call reminder app to schedule calls, get timely notifications, and never miss important conversations again.',
     tags: ['HTML 5', 'CSS 3',"tailwind CSS","ES6" ,'JavaScript'],
@@ -106,7 +106,7 @@ const projects = [
     containerSelectors: ['.parent-container', ".project-container"]
   },
 {
-  image: '/assets/image/To Do app.png',
+  image: '/assets/images/todoapp.webp',
   title: 'To Do App',
   description: 'A clean and interactive frontend to-do app to organize tasks, and track daily productivity efficiently.',
   tags: ['HTML 5', 'Tailwind CSS', 'JavaScript', 'LocalStorage'],
@@ -116,7 +116,7 @@ const projects = [
   containerSelectors: ['.parent-container', '.project-container']
 },
   {
-    image: '/assets/image/Netflix Clone.png',
+    image: '/assets/images/netflix clone.webp',
     title: 'Netflix Nepal Clone',
     description: 'A responsive Netflix-inspired frontend clone showcasing movies and shows with interactive UI, search, and visually appealing design.',
     tags: ['Tailwind CSS', 'ES6', 'UI Design','Web Clone'],
@@ -126,7 +126,7 @@ const projects = [
     containerSelectors: ['.parent-container', '.project-container']
   },
   {
-    image: '/assets/image/FInd User.png',
+    image: '/assets/images/user finder.webp',
     title: 'Find User Feature',
     description: 'An App feature to find or search People or Stuffs using name or keyword.',
     tags: [ "HTML 5", 'Tailwind CSS', 'ES6', 'UI Design','Feature'],
@@ -136,7 +136,7 @@ const projects = [
     containerSelectors: ['.project-container']
   },
   {
-    image: '/assets/image/Love Confession.png',
+    image: '/assets/images/love confession.webp',
     title: 'Love Confession Website',
     description: 'Playful frontend confession site where the No button is disabled; clicking it shows cheeky pickup lines until they say yes.',
     tags: [ "HTML 5", 'Tailwind CSS', 'ES6', 'Animation','MicroInteraction'],
@@ -163,13 +163,13 @@ function insertCard(project, containerSelector) {
 
   card.innerHTML = `
     <div class="relative group">
-      <img src="${project.image}" alt="${project.title}" class="h-48 w-full object-cover rounded-t-xl transition-transform duration-500 group-hover:scale-105"/>
+      <img src="${project.image}" loading="lazy" decoding="async" alt="${project.title}" class="h-48 w-full object-cover rounded-t-xl transition-transform duration-500 group-hover:scale-105"/>
       <div class="absolute inset-0 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 flex items-center justify-center gap-4 transition-all duration-500">
         <a href="${project.liveLink}" target="_blank" class="px-3 py-2 bg-white/5 backdrop-blur-md text-white text-sm rounded-lg border border-white/20 hover:bg-white/10 hover:scale-105 transition">
-          <i class="ri-external-link-fill text-xl"></i> <span>Live Demo</span>
+          <i class="ri-external-link-fill text-xl mr-2"></i> <span>Live</span>
         </a>
         <a href="${project.sourceLink}" target="_blank" class="px-3 py-2 bg-white/10 backdrop-blur-md text-white text-sm rounded-lg border border-white/20 hover:bg-white/20 hover:scale-105 transition">
-          <i class="ri-code-view text-xl"></i> <span>Source Code</span>
+          <i class="ri-code-view text-xl mr-2"></i> <span>Code</span>
         </a>
       </div>
     </div>
@@ -316,17 +316,103 @@ menuTab.forEach(tab => {
   });
 
 
-  // Initialize VanillaTilt for all tilt elements
-document.querySelectorAll('.tilt').forEach(card => {
-  if (typeof VanillaTilt !== "undefined") {
-    VanillaTilt.init(card, {
-      max: parseInt(card.getAttribute('data-tilt-max')) || 15,
-      speed: parseInt(card.getAttribute('data-tilt-speed')) || 400,
-      glare: card.getAttribute('data-tilt-glare') === "true",
-      "max-glare": parseFloat(card.getAttribute('data-tilt-max-glare')) || 0.2,
-      scale: 1.02,
-      perspective: 1000,
-      transform: true
+/**
+ * Robust VanillaTilt init/destroy handler.
+ * - Only enables tilt when window width >= MOBILE_BREAKPOINT.
+ * - Destroys tilt instances when below breakpoint.
+ * - Guards against double-initialization.
+ * - Debounces resize events.
+ */
+
+(function () {
+  const MOBILE_BREAKPOINT = 768; // below this -> disable tilt
+  const DEBOUNCE_MS = 150;
+  const selector = "[data-tilt]";
+
+  // helper debounce
+  function debounce(fn, wait = DEBOUNCE_MS) {
+    let t;
+    return (...args) => {
+      clearTimeout(t);
+      t = setTimeout(() => fn(...args), wait);
+    };
+  }
+
+  // initialize tilt on a NodeList (only if not already initialized)
+  function initTiltOnElements(elements) {
+    if (!elements || elements.length === 0) return;
+    if (typeof VanillaTilt === "undefined") {
+      console.warn("VanillaTilt not loaded — include tilt.js before this script.");
+      return;
+    }
+    elements.forEach(el => {
+      // guard: not already initialized
+      if (!el.vanillaTilt) {
+        // use element attributes if present, otherwise fallback defaults
+        const options = {
+          max: parseFloat(el.getAttribute("data-tilt-max")) || 10,
+          speed: parseFloat(el.getAttribute("data-tilt-speed")) || 400,
+          scale: parseFloat(el.getAttribute("data-tilt-scale")) || 1.02,
+          glare: el.getAttribute("data-tilt-glare") === "true" || false,
+          "max-glare": parseFloat(el.getAttribute("data-tilt-max-glare")) || 0.15,
+          perspective: parseFloat(el.getAttribute("data-tilt-perspective")) || 1000
+        };
+        VanillaTilt.init(el, options);
+        // optional log for debugging
+        // console.log("VanillaTilt initialized on", el, options);
+      }
     });
   }
-});
+
+  // destroy tilt on all elements
+  function destroyTiltOnElements(elements) {
+    if (!elements || elements.length === 0) return;
+    elements.forEach(el => {
+      if (el.vanillaTilt && typeof el.vanillaTilt.destroy === "function") {
+        try {
+          el.vanillaTilt.destroy();
+          // console.log("VanillaTilt destroyed on", el);
+        } catch (err) {
+          console.warn("Error destroying VanillaTilt instance:", err);
+        }
+      }
+    });
+  }
+
+  // main toggler based on width
+  function handleTiltToggle() {
+    const width = window.innerWidth;
+    const elements = document.querySelectorAll(selector);
+
+    if (width >= MOBILE_BREAKPOINT) {
+      initTiltOnElements(elements);
+    } else {
+      destroyTiltOnElements(elements);
+    }
+  }
+
+  // run after DOM ready
+  function ready(fn) {
+    if (document.readyState !== "loading") {
+      fn();
+    } else {
+      document.addEventListener("DOMContentLoaded", fn);
+    }
+  }
+
+  ready(() => {
+    // initial run
+    handleTiltToggle();
+
+    // handle dynamic content: if you add new elements later, call handleTiltToggle() again
+    // listen for resize with debounce
+    window.addEventListener("resize", debounce(handleTiltToggle, DEBOUNCE_MS));
+  });
+
+  // Expose for manual control (optional)
+  window.__TiltControl = {
+    enable: () => initTiltOnElements(document.querySelectorAll(selector)),
+    disable: () => destroyTiltOnElements(document.querySelectorAll(selector)),
+    toggle: handleTiltToggle
+  };
+})();

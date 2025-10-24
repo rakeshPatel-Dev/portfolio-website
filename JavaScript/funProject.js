@@ -3,14 +3,14 @@
     {
       title: "Rock Paper Scissors",
       description: "A fun, interactive Rock Paper Scissors game built with HTML, CSS, and JavaScript featuring smooth animations and instant score updates.",
-      image: "/assets/image/rock paper scissor.png",
+      image: "/assets/images/rock paper game.webp",
       playLink: "https://rakeshpatel-dev.github.io/Rock-Paper-Scissors/",
       sourceLink: "https://github.com/rakeshPatel-Dev/Rock-Paper-Scissors"
     },
     {
       title: "Guess the Number",
       description: "A simple yet exciting number guessing game where players test their luck and logic to find the hidden number quickly.",
-      image: "/assets/image/guess the number.png",
+      image: "/assets/images/guess the number.webp",
       playLink: "https://rakeshpatel-dev.github.io/Number-Guessing-Game/",
       sourceLink: "https://github.com/rakeshPatel-Dev/Number-Guessing-Game"
     }
@@ -44,7 +44,7 @@
     card.innerHTML = `
       <div class="aspect-video w-full overflow-hidden">
         <img
-          alt="${project.title}"
+          alt="${project.title}" loading="lazy" decoding="async"
           class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-110"
           src="${project.image}"
         />
@@ -59,14 +59,14 @@
         <div class="mt-6 flex gap-4">
           <a
             href="${project.playLink}" target="_blank"
-            class="flex h-11 items-center justify-center gap-2 rounded-lg bg-blue-700 px-5 text-base font-bold text-white shadow-lg transition-transform hover:scale-105"
+            class="flex h-11 items-center justify-center gap-2 rounded-lg bg-blue-700 px-5 text-sm sm:text-md font-bold text-white shadow-lg transition-transform hover:scale-105"
           >
             <i class="ri-gamepad-line text-xl font-normal"></i>
             Play Game
           </a>
           <a
             href="${project.sourceLink}" target="_blank"
-            class="flex h-11 items-center justify-center gap-2 rounded-lg border border-gray-300 dark:border-gray-700 px-5 text-base font-bold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
+            class="flex h-11 items-center justify-center gap-2 rounded-lg border border-gray-300 dark:border-gray-700 px-5 text-sm sm:text-md font-bold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
           >
             <i class="ri-github-line font-normal text-xl"></i>
             Source Code
