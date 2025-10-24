@@ -96,34 +96,54 @@ containers.forEach(container => {
 // ---------------- Project Data ----------------
 const projects = [
   {
-    image: 'https://plus.unsplash.com/premium_photo-1683548102827-105533f5c9c3?ixlib=rb-4.1.0&auto=format&fit=crop&w=600&q=60',
-    title: 'Gen Z AI',
-    description: 'An AI-powered platform tailored for Gen Z, offering personalized content and career guidance.',
-    tags: ['HTML 5', 'CSS 3', 'JavaScript'],
-    liveLink: '#',
-    sourceLink: '#',
+    image: '/assets/image/Call Reminder App.png',
+    title: 'Call Reminder App',
+    description: 'A sleek frontend call reminder app to schedule calls, get timely notifications, and never miss important conversations again.',
+    tags: ['HTML 5', 'CSS 3',"tailwind CSS","ES6" ,'JavaScript'],
+    liveLink: 'https://callreminderapp.netlify.app/',
+    sourceLink: 'https://github.com/rakeshPatel-Dev/Note-App.git',
     type: 'web', // for filtering
-    containerSelectors: ['.parent-container', '.project-container']
+    containerSelectors: ['.parent-container', ".project-container"]
   },
+{
+  image: '/assets/image/To Do app.png',
+  title: 'To Do App',
+  description: 'A clean and interactive frontend to-do app to organize tasks, and track daily productivity efficiently.',
+  tags: ['HTML 5', 'Tailwind CSS', 'JavaScript', 'LocalStorage'],
+  liveLink: 'https://rakeshpatel-dev.github.io/todo-App/',
+  sourceLink: 'https://github.com/rakeshPatel-Dev/todo-App',
+  type: 'web',
+  containerSelectors: ['.parent-container', '.project-container']
+},
   {
-    image: 'https://plus.unsplash.com/premium_photo-1706102974861-c65692f3b36c?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=600',
-    title: 'Modern UI Kit',
-    description: 'A sleek UI component library built with Tailwind CSS for fast design workflow.',
-    tags: ['Tailwind CSS', 'JavaScript', 'UI Design'],
+    image: '/assets/image/Netflix Clone.png',
+    title: 'Netflix Nepal Clone',
+    description: 'A responsive Netflix-inspired frontend clone showcasing movies and shows with interactive UI, search, and visually appealing design.',
+    tags: ['Tailwind CSS', 'ES6', 'UI Design','Web Clone'],
     liveLink: '#',
-    sourceLink: '#',
+    sourceLink: 'https://github.com/rakeshPatel-Dev/Clone-Projects/tree/main/Netflix',
     type: 'web',
     containerSelectors: ['.parent-container', '.project-container']
   },
   {
-    image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=600',
-    title: 'Business Landing Page',
-    description: 'A modern and interactive business landing page for dairy farm.',
-    tags: ['Tailwind CSS', 'ES 6', 'UI Design'],
+    image: '/assets/image/FInd User.png',
+    title: 'Find User Feature',
+    description: 'An App feature to find or search People or Stuffs using name or keyword.',
+    tags: [ "HTML 5", 'Tailwind CSS', 'ES6', 'UI Design','Feature'],
     liveLink: '#',
-    sourceLink: '#',
+    sourceLink: 'https://github.com/rakeshPatel-Dev/User-Finder',
     type: 'web',
-    containerSelectors: ['.parent-container', '.project-container']
+    containerSelectors: ['.project-container']
+  },
+  {
+    image: '/assets/image/Love Confession.png',
+    title: 'Love Confession Website',
+    description: 'Playful frontend confession site where the No button is disabled; clicking it shows cheeky pickup lines until they say yes.',
+    tags: [ "HTML 5", 'Tailwind CSS', 'ES6', 'Animation','MicroInteraction'],
+    liveLink: '#',
+    sourceLink: 'https://github.com/rakeshPatel-Dev/Love-Confession',
+    type: 'web',
+    containerSelectors: ['.project-container']
   }
 ];
 

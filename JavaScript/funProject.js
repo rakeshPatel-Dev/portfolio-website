@@ -1,18 +1,18 @@
   // Array of fun projects
   const funProjects = [
     {
-      title: "Galactic Invaders",
-      description: "A retro-style space shooter game built with JavaScript and HTML5 Canvas.",
-      image: "https://lh3.googleusercontent.com/aida-public/AB6AXuA3s-lmZ-FipUn9B-x3Kp9GObc2ixDRdjHVaUKOYYl5qApSXk3fZVL8-pAHvKGbntlpGPFB00hvYpi0a82qsoCwprW2m5mvf0l95o_FjeghegCTgLVNavaLDWe7OA3pkd2ibLYd9aO_waABF9SQw0GoiEXqKmNQOKHsN--3JUDHrQWqV5ADwS2ZiS9FF9raYp9QceJ2Tsb_cvZjd7BUl6sh6ADeJUKAMy4JfZxu7xCLq-8PS1jzoLhu_Iu6OQF280AUgIVl5VO3X37n",
-      playLink: "#",
-      sourceLink: "#"
+      title: "Rock Paper Scissors",
+      description: "A fun, interactive Rock Paper Scissors game built with HTML, CSS, and JavaScript featuring smooth animations and instant score updates.",
+      image: "/assets/image/rock paper scissor.png",
+      playLink: "https://rakeshpatel-dev.github.io/Rock-Paper-Scissors/",
+      sourceLink: "https://github.com/rakeshPatel-Dev/Rock-Paper-Scissors"
     },
     {
-      title: "Color Match Mania",
-      description: "A fun puzzle game where players match colors using logic and timing.",
-      image: "https://images.unsplash.com/photo-1760681554254-f8e6f8e2f482?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxMnx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=60&w=600",
-      playLink: "#",
-      sourceLink: "#"
+      title: "Guess the Number",
+      description: "A simple yet exciting number guessing game where players test their luck and logic to find the hidden number quickly.",
+      image: "/assets/image/guess the number.png",
+      playLink: "https://rakeshpatel-dev.github.io/Number-Guessing-Game/",
+      sourceLink: "https://github.com/rakeshPatel-Dev/Number-Guessing-Game"
     }
   ];
 
@@ -58,14 +58,14 @@
         </p>
         <div class="mt-6 flex gap-4">
           <a
-            href="${project.playLink}"
+            href="${project.playLink}" target="_blank"
             class="flex h-11 items-center justify-center gap-2 rounded-lg bg-blue-700 px-5 text-base font-bold text-white shadow-lg transition-transform hover:scale-105"
           >
             <i class="ri-gamepad-line text-xl font-normal"></i>
             Play Game
           </a>
           <a
-            href="${project.sourceLink}"
+            href="${project.sourceLink}" target="_blank"
             class="flex h-11 items-center justify-center gap-2 rounded-lg border border-gray-300 dark:border-gray-700 px-5 text-base font-bold text-gray-700 dark:text-gray-300 transition-colors hover:bg-gray-100 dark:hover:bg-gray-800"
           >
             <i class="ri-github-line font-normal text-xl"></i>
