@@ -103,7 +103,7 @@ const projects = [
     liveLink: '#',
     sourceLink: '#',
     type: 'web', // for filtering
-    containerSelectors: ['.parent-container']
+    containerSelectors: ['.parent-container', '.project-container']
   },
   {
     image: 'https://plus.unsplash.com/premium_photo-1706102974861-c65692f3b36c?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=600',
@@ -113,7 +113,7 @@ const projects = [
     liveLink: '#',
     sourceLink: '#',
     type: 'web',
-    containerSelectors: ['.project-container']
+    containerSelectors: ['.parent-container', '.project-container']
   },
   {
     image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.1.0&auto=format&fit=crop&q=60&w=600',
@@ -133,7 +133,13 @@ function insertCard(project, containerSelector) {
   if (!container) return;
 
   const card = document.createElement('div');
-  card.className = 'flex flex-col rounded-xl bg-white/10 dark:bg-gray-800/20 backdrop-blur-xl shadow-lg transition-all duration-300 overflow-hidden hover:scale-105 opacity-0';
+  // Add tilt class and data attributes
+  card.className = 'tilt flex flex-col rounded-xl bg-white/10 dark:bg-gray-800/20 backdrop-blur-xl shadow-lg transition-all duration-300 overflow-hidden opacity-0';
+  card.setAttribute('data-tilt', '');
+  card.setAttribute('data-tilt-max', '15');
+  card.setAttribute('data-tilt-speed', '400');
+  card.setAttribute('data-tilt-glare', 'true');
+  card.setAttribute('data-tilt-max-glare', '0.3');
 
   card.innerHTML = `
     <div class="relative group">
@@ -160,7 +166,18 @@ function insertCard(project, containerSelector) {
 
   // Fade-in animation
   gsap.to(card, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" });
+
+  // Initialize Tilt on this card
+  if (typeof VanillaTilt !== "undefined") {
+    VanillaTilt.init(card, {
+      max: 15,
+      speed: 400,
+      glare: true,
+      "max-glare": 0.3
+    });
+  }
 }
+
 
 // ---------------- Render Projects with Filter ----------------
 function renderProjects({ containerSelector, filter = 'all', filterable = false }) {
@@ -277,3 +294,19 @@ menuTab.forEach(tab => {
       showToast(`Downloading ${filename}...`);
     });
   });
+
+
+  // Initialize VanillaTilt for all tilt elements
+document.querySelectorAll('.tilt').forEach(card => {
+  if (typeof VanillaTilt !== "undefined") {
+    VanillaTilt.init(card, {
+      max: parseInt(card.getAttribute('data-tilt-max')) || 15,
+      speed: parseInt(card.getAttribute('data-tilt-speed')) || 400,
+      glare: card.getAttribute('data-tilt-glare') === "true",
+      "max-glare": parseFloat(card.getAttribute('data-tilt-max-glare')) || 0.2,
+      scale: 1.02,
+      perspective: 1000,
+      transform: true
+    });
+  }
+});

@@ -149,31 +149,14 @@ section.relative {
   animation: pulse-glow 3s ease-in-out infinite;
 }
 
-/* marque animation */
-
-.move {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-}
-
-.marque {
-  display: flex;
-  align-items: center;
-  gap: 4rem;
-  flex-shrink: 0;
-}
-
-.marque h1 {
-  white-space: nowrap;
-}
-
-@media (max-width: 640px) {
-  .marque h1 {
-    font-size: 1.5rem;
+/* preloader */
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
-  .marque img {
-    height: 2.5rem;
-  }
+}
+
+#preloader.fade-out {
+  animation: fadeOut 0.8s ease forwards;
 }

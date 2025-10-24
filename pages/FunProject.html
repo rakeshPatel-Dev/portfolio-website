@@ -21,14 +21,14 @@
     class="bg-[#f6f7f8] dark:bg-[#101922] font-[Space Grotesk] text-gray-800 dark:text-gray-200"
   >
     <!-- navbar -->
-    <div class="relative flex h-auto w-full flex-col overflow-x-hidden">
+    <div class="relative flex h-auto w-full flex-col items-center justify-center overflow-x-hidden">
       <!-- navbar -->
       <header
-        class="sticky top-0 z-30 flex w-full items-center justify-between whitespace-nowrap border-b border-gray-200/30 dark:border-gray-400/30 bg-white/60 dark:bg-[#101922]/60 px-4 sm:px-10 py-3 backdrop-blur-md shadow-md transition-colors duration-300"
+        class="sticky top-0 z-30 flex w-4/6 items-center justify-between whitespace-nowrap border-b border-gray-200/30 dark:border-gray-400/30 bg-white/60 dark:bg-[#101922]/60 px-4 sm:px-10 py-3 backdrop-blur-md shadow-md transition-colors duration-300"
       >
         <div class="flex items-center gap-3">
-          <h2 class="text-lg font-bold text-gray-900 dark:text-white">Logo</h2>
-        </div>
+          <img src="/assets/image/wlogo.png" alt="Logo" class="h-14 w-14 object-contain"/>
+            </div>
 
         <!-- Navigation -->
         <nav class="hidden md:flex items-center gap-6">
@@ -58,6 +58,7 @@
           >
             <i class="ri-linkedin-box-line text-xl"></i>
           </button>
+        </div>
         </div>
       </header>
     </div>
@@ -92,10 +93,39 @@
           </p>
         </section>
         <!-- Container -->
-        <section id="fun-project" class="fun-project-container grid grid-cols-1 md:grid-cols-2 gap-8 mb-14">
+        <section id="fun-project" class="fun-project-container grid grid-cols-1 md:grid-cols-2 gap-8">
           <!-- fun project -->
           
         </section>
+
+         <section
+                class="relative flex flex-col items-center justify-center gap-6 rounded-xl bg-linear-to-br from-gray-800/60 to-gray-950/80  border-white/10 shadow-xl p-8 text-center overflow-hidden mb-14"
+              >
+                <!-- Animated background pulse effect -->
+                <div class="absolute -top-10 -left-10 ">
+                  <!-- Outer pulse -->
+                  <div class="relative h-20 w-20 rounded-full bg-gray-800/40 animate-pulse-glow"></div>
+                  <!-- Inner pulse -->
+                  <div class="absolute top-1/2 left-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gray-600/70 animate-pulse-glow"></div>
+                </div>
+              
+                <!-- Content -->
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-100">
+                  Check Out My Projects!
+                </h2>
+              
+                <p class="max-w-md text-gray-400 text-sm  sm:text-base">
+                  Interested in seeing more of my work? Visit the Projects page to explore a variety of web development projects I've created, showcasing my skills and creativity.
+                </p>
+              
+                <a
+                  href="/pages/project.html"
+                  class="group flex gap-2 h-12 items-center justify-center rounded-lg bg-blue-600/80 px-8 text-base font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-blue-700/90 animate-float"
+                >
+                  <span>Go to Projects </span>
+                  <i class="ri-arrow-right-long-fill text-xl group-hover:translate-x-3 transition-all"></i>
+                </a>
+              </section>
 
          
           </div>
@@ -155,7 +185,7 @@
               >
               <a
                 class="download-btn text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors"
-                href="/Rakesh Patel CV.pdf"
+                href="../assets/docs/Rakesh Patel CV.pdf"
                 download="Rakesh-patel_CV.pdf"
                 >Download Resume</a
               >
@@ -203,5 +233,6 @@
     ></script>
     <script src="/JavaScript/app.js"></script>
     <script src="/JavaScript/funProject.js"></script>
+    <script src="/JavaScript/tilt.js"></script>
   </body>
 </html>
