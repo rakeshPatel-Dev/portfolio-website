@@ -401,7 +401,7 @@
 </div>
 
 <!-- Contact Form -->
-<form 
+<form id="contactForm"
   action="https://formspree.io/f/mrbynjgk" 
   method="POST"
   data-tilt 
@@ -450,6 +450,12 @@
     Send Message
   </button>
 </form>
+<script>
+  function formReset() {
+    document.getElementById("contactForm").reset();
+  } 
+</script>
+
   </div>
 
   <!-- Toast Notification -->
