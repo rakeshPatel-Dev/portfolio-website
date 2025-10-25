@@ -3,6 +3,23 @@
 @import "tailwindcss";
 @tailwind utilities;
 
+/* for move to top btn */
+@keyframes glow {
+  0%,
+  100% {
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+    transform: translateY();
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+    transform: translateY(-1rem);
+  }
+}
+
+a[title="Move to Top"] {
+  animation: glow 3s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+}
+
 /* heading name animation */
 
 .heading span {
