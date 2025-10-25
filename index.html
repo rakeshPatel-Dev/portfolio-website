@@ -85,7 +85,7 @@
       <main class="flex flex-1 justify-center py-5">
         <div class="flex max-w-5xl flex-1 flex-col gap-12 px-4 sm:px-10">
           <!-- home section -->
-      <section
+    <section
   class="tilt relative min-h-[520px] flex flex-col items-center justify-center text-center rounded-md overflow-hidden"
   data-tilt
   data-tilt-max="10"
@@ -93,7 +93,7 @@
   data-tilt-glare="true"
   data-tilt-max-glare="0.2"
 >
-  <!-- Animated Gradient Background (Diagonal) -->
+  <!-- Animated Gradient Background -->
   <div class="absolute inset-0 z-0 animated-bg"></div>
 
   <!-- Pulsing Radial Circle -->
@@ -106,16 +106,14 @@
     
     <!-- Floating Badge -->
     <div class="absolute -top-12 animate-float translate-z-10">
-      <div
-        class="flex items-center gap-2 bg-gray-800/50 backdrop-blur-md rounded-full px-4 py-2 text-sm text-gray-300 shadow-lg border border-gray-700/50"
-      >
+      <div class="flex items-center gap-2 bg-gray-800/50 backdrop-blur-md rounded-full px-4 py-2 text-sm text-gray-300 shadow-lg border border-gray-700/50">
         <i class="ri-map-pin-line"></i>
         <span>Bagmati, Kathmandu</span>
       </div>
     </div>
 
     <!-- Name -->
-    <h1 class="heading text-[2rem] -ml-10 sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg translate-z-20">
+    <h1 class="heading -ml-14 text-[2rem] sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white drop-shadow-lg translate-z-20 text-center">
       Rakesh Patel
     </h1>
 
@@ -126,26 +124,35 @@
 
     <!-- Buttons -->
     <div class="flex flex-col sm:flex-row gap-4 mt-6 translate-z-10">
-      <a rel="prefetch" href="./pages/Project.html"
+      <a
+        rel="prefetch"
+        href="./pages/Project.html"
         class="flex h-12 w-full sm:w-auto items-center justify-center rounded-lg bg-blue-600 px-6 text-base font-bold text-white shadow-lg transition-transform transform hover:scale-105 hover:shadow-xl"
       >
         View My Work
       </a>
-      <a href="/assets/docs/Rakesh Patel CV.pdf" download="Rakesh-patel_CV.pdf"
+      <a
+        href="/assets/docs/Rakesh Patel CV.pdf"
+        download="Rakesh-patel_CV.pdf"
         class="download-btn flex h-12 w-full sm:w-auto items-center justify-center rounded-lg bg-gray-800/70 px-6 text-base font-bold text-white shadow-lg transition-all hover:bg-gray-700/80 hover:shadow-xl"
       >
-        <i class="ri-file-download-line font-normal text-xl mr-2"></i> Download Resume
+        <i class="ri-file-download-line font-normal text-xl mr-2"></i>
+        Download Resume
       </a>
     </div>
   </div>
+
   <div id="toastContainer" class="fixed top-5 right-5 flex flex-col gap-2 z-50"></div>
 </section>
+
 
 
       <!-- about  -->
       <section class="flex flex-col gap-4">
       <h2 class="text-2xl font-bold text-gray-900 dark:text-white">About Me</h2>
-      <p class="text-base px-6 text-gray-600 dark:text-gray-300 border-l-4 border-gray-400 pl-4  ">I’m a frontend developer and graphic designer a bit. I build websites using <mark>HTML</mark>, <mark>CSS</mark>, <mark>Tailwind</mark>, <mark>JavaScript</mark>, and <mark></mark>React, and create graphics for brands. I enjoy <mark>solving problems</mark>, <mark>learning new tools</mark>, and improving my work with each project to make websites and designs practical and easy to use.</p>
+      <div class="px-6">
+      <p class="text-sm text-gray-600 dark:text-gray-300 border-l-4 border-gray-400 pl-4">I’m a frontend developer and graphic designer a bit. I build websites using <mark>HTML</mark>, <mark>CSS</mark>, <mark>Tailwind</mark>, <mark>JavaScript</mark>, and <mark></mark>React, and create graphics for brands. I enjoy <mark>solving problems</mark>, <mark>learning new tools</mark>, and improving my work with each project to make websites and designs practical and easy to use.</p>
+      </div>
       </section>
 
 
@@ -423,16 +430,16 @@
 </div>
     <div>
       <h3 class="font-bold text-lg text-gray-900 dark:text-white">Social Media</h3>
-      <div class="flex gap-4 mt-1">
-        <a title="linkedIn" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all bg-gray-800 hover:bg-gray-700 h-10 w-10 flex items-center justify-center rounded-full" href="https://www.linkedin.com/in/rakeshpatel-developer/" rel="noopener noreferrer" target="_blank"><i class="ri-linkedin-fill text-md sm:text-xl"></i></a>
+      <div class="flex gap-2 mt-1">
+        <a title="linkedIn" class="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-all bg-gray-800 hover:bg-gray-700 h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center rounded-full " href="https://www.linkedin.com/in/rakeshpatel-developer/" rel="noopener noreferrer" target="_blank"><i class="ri-linkedin-fill text-md sm:text-xl"></i></a>
 
-        <a title="github" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all bg-gray-800 hover:bg-gray-700 h-10 w-10 flex items-center justify-center rounded-full" href="https://github.com/rakeshPatel-Dev" target="_blank" rel="noopener noreferrer"><i class="ri-github-fill text-md sm:text-xl"></i></a>
+        <a title="github" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-all bg-gray-800 hover:bg-gray-700 h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center rounded-full" href="https://github.com/rakeshPatel-Dev" target="_blank" rel="noopener noreferrer"><i class="ri-github-fill text-md sm:text-xl"></i></a>
 
-        <a title="twitter" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-all bg-gray-800 hover:bg-gray-700 h-10 w-10 flex items-center justify-center rounded-full" href="https://x.com/Rakesh_Patel112" target="_blank" rel="noopener noreferrer"><i class="ri-twitter-x-fill text-md sm:text-xl"></i></a>
+        <a title="twitter" class="text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-all bg-gray-800 hover:bg-gray-700 h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center rounded-full" href="https://x.com/Rakesh_Patel112" target="_blank" rel="noopener noreferrer"><i class="ri-twitter-x-fill text-md sm:text-xl"></i></a>
 
-        <a title="Instagram" class="text-gray-600 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-all bg-gray-800 hover:bg-gray-700 h-10 w-10 flex items-center justify-center rounded-full" href="https://www.instagram.com/rikesh_112/" target="_blank" rel="noopener noreferrer"><i class="ri-instagram-fill text-md sm:text-xl"></i></a>
+        <a title="Instagram" class="text-gray-600 dark:text-gray-300 hover:text-pink-500 dark:hover:text-pink-400 transition-all bg-gray-800 hover:bg-gray-700 h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center rounded-full" href="https://www.instagram.com/rikesh_112/" target="_blank" rel="noopener noreferrer"><i class="ri-instagram-fill text-md sm:text-xl"></i></a>
 
-        <a title="Facebook" class="text-gray-600 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-500 transition-all bg-gray-800 hover:bg-gray-700 h-10 w-10 flex items-center justify-center rounded-full" href="https://www.facebook.com/rikesh.patel.770216" target="_blank" rel="noopener noreferrer"><i class="ri-facebook-fill text-md sm:text-xl"></i></a>
+        <a title="Facebook" class="text-gray-600 dark:text-gray-300 hover:text-blue-700 dark:hover:text-blue-500 transition-all bg-gray-800 hover:bg-gray-700 h-8 w-8 sm:h-10 sm:w-10 flex items-center justify-center rounded-full" href="https://www.facebook.com/rikesh.patel.770216" target="_blank" rel="noopener noreferrer"><i class="ri-facebook-fill text-md sm:text-xl"></i></a>
       </div>
     </div>
   </div>
@@ -447,7 +454,7 @@
   onsubmit="setTimeout(formReset, 1000);"
   data-tilt 
   data-tilt-scale="1.1" 
-  class="flex w-full flex-col gap-4 bg-white/20 dark:bg-gray-900/30 backdrop-blur-xl p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
+  class="flex w-full flex-col gap-4 bg-white/20 dark:bg-gray-800/30 hover:bg-gray-700/30 backdrop-blur-xl p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300"
 >
   <div>
     <label class="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300" for="name">Name</label>
