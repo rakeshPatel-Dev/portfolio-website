@@ -1,23 +1,23 @@
-  // Array of fun projects
-  const funProjects = [
-    {
-      title: "Rock Paper Scissors",
-      description: "A fun, interactive Rock Paper Scissors game built with HTML, CSS, and JavaScript featuring smooth animations and instant score updates.",
-      image: "/assets/images/rock paper game.webp",
-      playLink: "https://rakeshpatel-dev.github.io/Rock-Paper-Scissors/",
-      sourceLink: "https://github.com/rakeshPatel-Dev/Rock-Paper-Scissors"
-    },
-    {
-      title: "Guess the Number",
-      description: "A simple yet exciting number guessing game where players test their luck and logic to find the hidden number quickly.",
-      image: "/assets/images/guess the number.webp",
-      playLink: "https://rakeshpatel-dev.github.io/Number-Guessing-Game/",
-      sourceLink: "https://github.com/rakeshPatel-Dev/Number-Guessing-Game"
-    }
-  ];
+// Array of fun projects
+const funProjects = [
+  {
+    title: "Rock Paper Scissors",
+    description: "A fun, interactive Rock Paper Scissors game built with HTML, CSS, and JavaScript featuring smooth animations and instant score updates.",
+    image: "/assets/images/rock paper game.webp",
+    playLink: "https://rakeshpatel-dev.github.io/Rock-Paper-Scissors/",
+    sourceLink: "https://github.com/rakeshPatel-Dev/Rock-Paper-Scissors"
+  },
+  {
+    title: "Guess the Number",
+    description: "A simple yet exciting number guessing game where players test their luck and logic to find the hidden number quickly.",
+    image: "/assets/images/guess the number.webp",
+    playLink: "https://rakeshpatel-dev.github.io/Number-Guessing-Game/",
+    sourceLink: "https://github.com/rakeshPatel-Dev/Number-Guessing-Game"
+  }
+];
 
-  // Function to insert projects dynamically
- function renderFunProjects() {
+// Function to insert projects dynamically
+function renderFunProjects() {
   const container = document.getElementById("fun-project");
   container.innerHTML = ""; // clear old ones
 
@@ -33,7 +33,7 @@
   funProjects.forEach(project => {
     const card = document.createElement('div');
     card.className = `tilt group relative flex flex-col overflow-hidden rounded-xl border border-gray-200/80 dark:border-gray-800/80 bg-white/50 dark:bg-gray-900/50 shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1`;
-    
+
     // Add VanillaTilt attributes
     card.setAttribute('data-tilt', '');
     card.setAttribute('data-tilt-max', '15');

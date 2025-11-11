@@ -1,299 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Projects | Portfolio Website | Frontend Developer</title>
-    <link rel="stylesheet" href="../dist/output.css" />
-    <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body
-    class="bg-[#f6f7f8] dark:bg-[#101922] font-[Space Grotesk] text-gray-800 dark:text-gray-200"
-  >
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Portfolio Website | Frontend Developer</title>
+  <link rel="stylesheet" href="../dist/output.css" />
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="bg-[#f6f7f8] dark:bg-[#101922] font-[Space Grotesk] text-gray-800 dark:text-gray-200">
+  <!-- navbar -->
+  <div class="relative flex items-center h-auto flex-col">
     <!-- navbar -->
-    <div class="relative flex items-center h-auto flex-col">
-      <!-- navbar -->
-      <header
-        class="sticky top-0 z-30 flex w-full items-center justify-between whitespace-nowrap border-b border-gray-200/30 dark:border-gray-400/30 bg-white/60 dark:bg-[#101922]/60 px-4 sm:px-10 py-3 backdrop-blur-md shadow-md transition-colors duration-300"
-      >
-          <div class="flex items-center gap-3">
-            <img
-              src="/assets/images/logo.png"
-              alt="Logo"
-              class="h-14 w-14 object-contain"
-            />
-          </div>
-
-          <!-- Navigation -->
-          <nav class="hidden md:flex items-center gap-6">
-            <a
-              class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
-              href="/index.html#skills"
-              >Skills</a
-            >
-            <a
-              class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
-              href="/index.html#expNedu"
-              >Exp N Edu</a
-            >
-            <a
-              class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
-              href="#"
-              >Projects</a
-            >
-            <a
-              class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
-              href="/pages/FunProject.html"
-              >Fun Kit</a
-            >
-            <a
-              class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
-              href="#contact"
-              >Contact</a
-            >
-          </nav>
-
-          <!-- Social Icons -->
-          <div class="flex items-center gap-2">
-            <a
-              href="https://github.com/rakeshPatel-Dev"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="GitHub"
-              class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200/50 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 transition-all duration-300 hover:scale-110 shadow-sm"
-            >
-              <i class="ri-github-line text-xl"></i>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/rakeshpatel-developer/"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="LinkedIn"
-              class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200/50 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 transition-all duration-300 hover:scale-110 shadow-sm"
-            >
-              <i class="ri-linkedin-fill text-xl font-normal"></i>
-            </a>
-          </div>
-        </div>
-      </header>
-    </div>
-
-    <!-- main section -->
-    <main class="flex-1 px-4 py-8 sm:px-10">
-      <div class="mx-auto max-w-4xl">
-        <div class="mb-10">
-          <div class="flex items-center justify-between">
-            <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
-              Projects
-            </h1>
-            <a
-              href="../index.html"
-              class="group bg-gray-800 px-4 py-2 rounded-md hover:bg-gray-700 inline-flex items-center transition-all"
-            >
-              <i
-                class="ri-arrow-left-long-fill mr-2 transform transition-transform duration-200 group-hover:-translate-x-2"
-              ></i>
-              Go to Home
-            </a>
-          </div>
-          <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">
-            A selection of my recent work, showcasing my skills and experience
-            in web development.
-          </p>
-        </div>
-        <!-- filter feature -->
-        <nav
-          aria-label="menuTab"
-          class="mb-8 flex flex-wrap items-center gap-2"
-        >
-          <button
-            class="tab active rounded-lg px-4 py-2 text-sm font-medium"
-            data-filter="all"
-          >
-            All
-          </button>
-          <button
-            class="tab rounded-lg px-4 py-2 text-sm font-medium"
-            data-filter="web"
-          >
-            Web Apps
-          </button>
-          <button
-            class="tab rounded-lg px-4 py-2 text-sm font-medium"
-            data-filter="mobile"
-          >
-            Mobile Apps
-          </button>
-          <p
-            class="text-sm text-gray-500 bg-gray-800 px-3 py-1 rounded scale-75"
-          >
-            Only Web Apps Available
-          </p>
-        </nav>
-
-        <!-- projects -->
-        <div
-          class="project-container grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mb-14"
-        >
-          <!-- Project cards will be dynamically inserted here -->
-        </div>
+    <header
+      class="sticky top-0 z-30 flex w-full items-center justify-between whitespace-nowrap border-b border-gray-200/30 dark:border-gray-400/30 bg-white/60 dark:bg-[#101922]/60 px-4 sm:px-10 py-3 backdrop-blur-md shadow-md transition-colors duration-300">
+      <div class="flex items-center gap-3">
+        <img src="/assets/images/logo.png" alt="Logo" class="h-14 w-14 object-contain" />
       </div>
 
-      <!-- fun project -->
-      <section
-        class="relative flex flex-col items-center justify-center gap-6 rounded-xl bg-linear-to-br from-gray-800/60 to-gray-950/80 border-white/10 shadow-xl p-8 text-center overflow-hidden max-w-4xl mx-auto mb-20"
-      >
-        <!-- Animated background pulse effect -->
-        <div class="absolute -top-10 -left-10">
-          <!-- Outer pulse -->
-          <div
-            class="relative h-20 w-20 rounded-full bg-gray-800/40 animate-pulse-glow"
-          ></div>
-          <!-- Inner pulse -->
-          <div
-            class="absolute top-1/2 left-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gray-600/70 animate-pulse-glow"
-          ></div>
-        </div>
+      <!-- Navigation -->
+      <nav class="hidden md:flex items-center gap-6">
+        <a class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
+          href="/index.html#skills">Skills</a>
+        <a class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
+          href="/index.html#expNedu">Exp N Edu</a>
+        <a class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
+          href="#">Projects</a>
+        <a class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
+          href="/pages/FunProject.html">Fun Kit</a>
+        <a class="text-md font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 px-4 py-2 rounded-full dark:hover:text-blue-500 transition-all duration-300 hover:scale-105"
+          href="#contact">Contact</a>
+      </nav>
 
-        <!-- Content -->
-        <h2 class="text-2xl sm:text-3xl font-bold text-gray-100">
-          Want to do some fun?
-        </h2>
-
-        <p class="max-w-md text-gray-400 text-sm sm:text-base">
-          Check out my collection of fun side projects, experiments, and other
-          creative coding endeavors. There’s always something new to explore!
-        </p>
-
-        <a
-          href="/pages/FunProject.html"
-          class="group flex gap-2 h-12 items-center justify-center rounded-lg bg-blue-600/80 px-8 text-base font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-blue-700/90 animate-float"
-        >
-          <span>Explore Fun Projects</span>
-          <i
-            class="ri-arrow-right-long-fill text-xl group-hover:translate-x-3 transition-all"
-          ></i>
+      <!-- Social Icons -->
+      <div class="flex items-center gap-2">
+        <a href="https://github.com/rakeshPatel-Dev" target="_blank" rel="noopener noreferrer" title="GitHub"
+          class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200/50 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 transition-all duration-300 hover:scale-110 shadow-sm">
+          <i class="ri-github-line text-xl"></i>
         </a>
-      </section>
-    </main>
+        <a href="https://www.linkedin.com/in/rakeshpatel-developer/" target="_blank" rel="noopener noreferrer"
+          title="LinkedIn"
+          class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-200/50 dark:bg-gray-800/50 text-gray-700 dark:text-gray-300 hover:bg-gray-300/50 dark:hover:bg-gray-700/50 transition-all duration-300 hover:scale-110 shadow-sm">
+          <i class="ri-linkedin-fill text-xl font-normal"></i>
+        </a>
+      </div>
+  </div>
+  </header>
+  </div>
 
-    <!-- guitar -->
-    <div class="relative">
-      <div
-        class="container absolute left-0 -top-26 flex items-center justify-center min-h-44 w-full"
-      >
-        <svg width="950" height="160" class="block">
-          <path
-            d="M 10 100 Q 500 100 890 100"
-            stroke="gray"
-            fill="transparent"
-            stroke-width="2"
-          />
-        </svg>
+  <!-- main section -->
+  <main class="flex-1 px-4 py-8 sm:px-10">
+    <div class="mx-auto max-w-4xl">
+      <div class="mb-10">
+        <div class="flex items-center justify-between">
+          <h1 class="text-4xl font-bold text-gray-900 dark:text-white">
+            Projects
+          </h1>
+          <a href="../index.html"
+            class="group bg-gray-800 px-4 py-2 rounded-md hover:bg-gray-700 inline-flex items-center transition-all">
+            <i
+              class="ri-arrow-left-long-fill mr-2 transform transition-transform duration-200 group-hover:-translate-x-2"></i>
+            Go to Home
+          </a>
+        </div>
+        <p class="mt-2 text-lg text-gray-600 dark:text-gray-400">
+          A selection of my recent work, showcasing my skills and experience
+          in web development.
+        </p>
+      </div>
+      <!-- filter feature -->
+      <nav aria-label="menuTab" class="mb-8 flex flex-wrap items-center gap-2">
+        <button class="tab active rounded-lg px-4 py-2 text-sm font-medium" data-filter="all">
+          All
+        </button>
+        <button class="tab rounded-lg px-4 py-2 text-sm font-medium" data-filter="web">
+          Web Apps
+        </button>
+        <button class="tab rounded-lg px-4 py-2 text-sm font-medium" data-filter="mobile">
+          Mobile Apps
+        </button>
+        <p class="text-sm text-gray-500 bg-gray-800 px-3 py-1 rounded scale-75">
+          Only Web Apps Available
+        </p>
+      </nav>
+
+      <!-- projects -->
+      <div class="project-container grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 mb-14">
+        <!-- Project cards will be dynamically inserted here -->
       </div>
     </div>
-    <!-- footer -->
-    <footer class="w-full bg-gray-900 text-gray-400">
-      <div class="mx-auto max-w-5xl px-4 sm:px-10 py-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div class="flex flex-col gap-4">
-            <div class="flex items-center gap-3">
-              <h2 class="text-lg font-bold text-white">Rakesh Patel</h2>
-            </div>
-            <p class="text-sm">
-              Creating seamless digital experiences through innovative frontend
-              development and design.
-            </p>
-          </div>
-          <div>
-            <h3 class="text-md font-semibold text-white mb-4">Quick Links</h3>
-            <nav class="inline-flex flex-col gap-2">
-              <a
-                class="text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors inline-block"
-                href="/index.html#aboutme"
-                >About</a
-              >
-              <a
-                class="text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors"
-                href="/index.html#skills"
-                >Skills</a
-              >
-              <a
-                class="text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors"
-                href="#"
-                >Projects</a
-              >
-              <a
-                class="text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors"
-                href="/pages/FunProject.html"
-                >Fun Projects</a
-              >
-              <a
-                class="download-btn text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors"
-                href="../assets/docs/Rakesh Patel CV.pdf"
-                download="Rakesh-patel_CV.pdf"
-                >Download Resume</a
-              >
-            </nav>
-          </div>
-          <div>
-            <h3 class="text-md font-semibold text-white mb-4">Connect</h3>
-            <div class="flex gap-4">
-              <a
-                title="linkedIn"
-                class="text-gray-400 hover:text-blue-500 hover:scale-110 transition-all"
-                href="https://www.linkedin.com/in/rakeshpatel-developer/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="ri-linkedin-fill text-xl"></i>
-              </a>
-              <a
-                title="github"
-                class="text-gray-400 hover:scale-110 hover:text-gray-500 transition-all"
-                href="https://github.com/rakeshPatel-Dev"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="ri-github-fill text-xl"></i>
-              </a>
-              <a
-                title="twitter X"
-                class="text-gray-400 hover:text-gray-600 hover:scale-110 transition-all"
-                href="https://x.com/Rakesh_Patel112"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="ri-twitter-x-fill text-xl"></i>
-              </a>
-            </div>
-          </div>
-        </div>
 
-        <div class="mt-8 border-t border-gray-800 pt-4 text-center text-sm">
-          <p>© 2025 Rakesh Patel. All rights reserved.</p>
+    <!-- fun project -->
+    <section
+      class="relative flex flex-col items-center justify-center gap-6 rounded-xl bg-linear-to-br from-gray-800/60 to-gray-950/80 border-white/10 shadow-xl p-8 text-center overflow-hidden max-w-4xl mx-auto mb-20">
+      <!-- Animated background pulse effect -->
+      <div class="absolute -top-10 -left-10">
+        <!-- Outer pulse -->
+        <div class="relative h-20 w-20 rounded-full bg-gray-800/40 animate-pulse-glow"></div>
+        <!-- Inner pulse -->
+        <div
+          class="absolute top-1/2 left-1/2 h-10 w-10 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gray-600/70 animate-pulse-glow">
         </div>
       </div>
-    </footer>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
-      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="/JavaScript/app.js"></script>
-    <script src="/JavaScript/tilt.js"></script>
-  </body>
+      <!-- Content -->
+      <h2 class="text-2xl sm:text-3xl font-bold text-gray-100">
+        Want to do some fun?
+      </h2>
+
+      <p class="max-w-md text-gray-400 text-sm sm:text-base">
+        Check out my collection of fun side projects, experiments, and other
+        creative coding endeavors. There’s always something new to explore!
+      </p>
+
+      <a href="/pages/FunProject.html"
+        class="group flex gap-2 h-12 items-center justify-center rounded-lg bg-blue-600/80 px-8 text-base font-bold text-white shadow-lg transition-all hover:scale-105 hover:bg-blue-700/90 animate-float">
+        <span>Explore Fun Projects</span>
+        <i class="ri-arrow-right-long-fill text-xl group-hover:translate-x-3 transition-all"></i>
+      </a>
+    </section>
+  </main>
+
+  <!-- guitar -->
+  <div class="relative">
+    <div class="container absolute left-0 -top-26 flex items-center justify-center min-h-44 w-full">
+      <svg width="950" height="160" class="block">
+        <path d="M 10 100 Q 500 100 890 100" stroke="gray" fill="transparent" stroke-width="2" />
+      </svg>
+    </div>
+  </div>
+  <!-- footer -->
+  <footer class="w-full bg-gray-900 text-gray-400">
+    <div class="mx-auto max-w-5xl px-4 sm:px-10 py-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="flex flex-col gap-4">
+          <div class="flex items-center gap-3">
+            <h2 class="text-lg font-bold text-white">Rakesh Patel</h2>
+          </div>
+          <p class="text-sm">
+            Creating seamless digital experiences through innovative frontend
+            development and design.
+          </p>
+        </div>
+        <div>
+          <h3 class="text-md font-semibold text-white mb-4">Quick Links</h3>
+          <nav class="inline-flex flex-col gap-2">
+            <a class="text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors inline-block"
+              href="/index.html#aboutme">About</a>
+            <a class="text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors"
+              href="/index.html#skills">Skills</a>
+            <a class="text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors" href="#">Projects</a>
+            <a class="text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors"
+              href="/pages/FunProject.html">Fun Projects</a>
+            <a class="download-btn text-sm text-gray-400 hover:text-gray-500 font-semibold transition-colors"
+              href="../assets/docs/Rakesh Patel CV.pdf" download="Rakesh-patel_CV.pdf">Download Resume</a>
+          </nav>
+        </div>
+        <div>
+          <h3 class="text-md font-semibold text-white mb-4">Connect</h3>
+          <div class="flex gap-4">
+            <a title="linkedIn" class="text-gray-400 hover:text-blue-500 hover:scale-110 transition-all"
+              href="https://www.linkedin.com/in/rakeshpatel-developer/" target="_blank" rel="noopener noreferrer">
+              <i class="ri-linkedin-fill text-xl"></i>
+            </a>
+            <a title="github" class="text-gray-400 hover:scale-110 hover:text-gray-500 transition-all"
+              href="https://github.com/rakeshPatel-Dev" target="_blank" rel="noopener noreferrer">
+              <i class="ri-github-fill text-xl"></i>
+            </a>
+            <a title="twitter X" class="text-gray-400 hover:text-gray-600 hover:scale-110 transition-all"
+              href="https://x.com/Rakesh_Patel112" target="_blank" rel="noopener noreferrer">
+              <i class="ri-twitter-x-fill text-xl"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-8 border-t border-gray-800 pt-4 text-center text-sm">
+        <p>© 2025 Rakesh Patel. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+    integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="/JavaScript/app.js"></script>
+  <script src="/JavaScript/tilt.js"></script>
+</body>
+
 </html>

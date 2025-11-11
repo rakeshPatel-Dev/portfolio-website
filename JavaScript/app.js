@@ -22,20 +22,20 @@ const breakingText = () => {
 };
 
 
- breakingText()
+breakingText()
 
 gsap.from(".a", {
-   y:100,
-   duration:0.8,
-   opacity:0,
-   stagger:0.2
+  y: 100,
+  duration: 0.8,
+  opacity: 0,
+  stagger: 0.2
 })
 
 gsap.from(".b", {
-   y:100,
-   duration:0.8,
-   opacity:0,
-   stagger:-0.2
+  y: 100,
+  duration: 0.8,
+  opacity: 0,
+  stagger: -0.2
 })
 
 // tab switching for experience section
@@ -95,31 +95,52 @@ containers.forEach(container => {
 
 // ---------------- Project Data ----------------
 const projects = [
+
+  {
+    image: '/assets/images/imagetoolkit.webp',
+    title: 'Image Toolkit',
+    description: 'An Onestop Solution for developers to resize, compress, change type and crop images.',
+    tags: ['React', 'Tailwind CSS', "Shadcn UI", "TypeScript", 'Stitch', "Frontend"],
+    liveLink: 'https://imagetoolkit.vercel.app/',
+    sourceLink: 'https://github.com/rakeshPatel-Dev/image-toolkit',
+    type: 'web', // for filtering
+    containerSelectors: ['.parent-container', ".project-container"]
+  },
+  {
+    image: '/assets/images/photolab.webp',
+    title: 'Photolab - Gallery App',
+    description: 'A web app where user can explore different types of images. Have features of Searching, theme optimization and random image fetch.',
+    tags: ['React', 'Tailwind CSS', "JavaScript", 'Stitch', "Frontend", "Unsplash"],
+    liveLink: 'https://photolab-app.netlify.app/',
+    sourceLink: 'https://github.com/rakeshPatel-Dev/gallery-app',
+    type: 'web', // for filtering
+    containerSelectors: ['.parent-container', ".project-container"]
+  },
   {
     image: '/assets/images/reminder app.webp',
     title: 'Call Reminder App',
     description: 'A sleek frontend call reminder app to schedule calls, get timely notifications, and never miss important conversations again.',
-    tags: ['HTML 5', 'CSS 3',"tailwind CSS","ES6" ,'JavaScript'],
+    tags: ['HTML 5', 'CSS 3', "tailwind CSS", "ES6", 'JavaScript'],
     liveLink: 'https://callreminderapp.netlify.app/',
     sourceLink: 'https://github.com/rakeshPatel-Dev/Note-App.git',
     type: 'web', // for filtering
     containerSelectors: ['.parent-container', ".project-container"]
   },
-{
-  image: '/assets/images/todoapp.webp',
-  title: 'To Do App',
-  description: 'A clean and interactive frontend to-do app to organize tasks, and track daily productivity efficiently.',
-  tags: ['HTML 5', 'Tailwind CSS', 'JavaScript', 'LocalStorage'],
-  liveLink: 'https://rakeshpatel-dev.github.io/todo-App/',
-  sourceLink: 'https://github.com/rakeshPatel-Dev/todo-App',
-  type: 'web',
-  containerSelectors: ['.parent-container', '.project-container']
-},
+  {
+    image: '/assets/images/todoapp.webp',
+    title: 'To Do App',
+    description: 'A clean and interactive frontend to-do app to organize tasks, and track daily productivity efficiently.',
+    tags: ['HTML 5', 'Tailwind CSS', 'JavaScript', 'LocalStorage'],
+    liveLink: 'https://rakeshpatel-dev.github.io/todo-App/',
+    sourceLink: 'https://github.com/rakeshPatel-Dev/todo-App',
+    type: 'web',
+    containerSelectors: ['.parent-container', '.project-container']
+  },
   {
     image: '/assets/images/netflix clone.webp',
     title: 'Netflix Nepal Clone',
     description: 'A responsive Netflix-inspired frontend clone showcasing movies and shows with interactive UI, search, and visually appealing design.',
-    tags: ['Tailwind CSS', 'ES6', 'UI Design','Web Clone'],
+    tags: ['Tailwind CSS', 'ES6', 'UI Design', 'Web Clone'],
     liveLink: '#',
     sourceLink: 'https://github.com/rakeshPatel-Dev/Clone-Projects/tree/main/Netflix',
     type: 'web',
@@ -129,7 +150,7 @@ const projects = [
     image: '/assets/images/user finder.webp',
     title: 'Find User Feature',
     description: 'An App feature to find or search People or Stuffs using name or keyword.',
-    tags: [ "HTML 5", 'Tailwind CSS', 'ES6', 'UI Design','Feature'],
+    tags: ["HTML 5", 'Tailwind CSS', 'ES6', 'UI Design', 'Feature'],
     liveLink: '#',
     sourceLink: 'https://github.com/rakeshPatel-Dev/User-Finder',
     type: 'web',
@@ -139,7 +160,7 @@ const projects = [
     image: '/assets/images/love confession.webp',
     title: 'Love Confession Website',
     description: 'Playful frontend confession site where the No button is disabled; clicking it shows cheeky pickup lines until they say yes.',
-    tags: [ "HTML 5", 'Tailwind CSS', 'ES6', 'Animation','MicroInteraction'],
+    tags: ["HTML 5", 'Tailwind CSS', 'ES6', 'Animation', 'MicroInteraction'],
     liveLink: '#',
     sourceLink: 'https://github.com/rakeshPatel-Dev/Love-Confession',
     type: 'web',
@@ -270,50 +291,50 @@ menuTab.forEach(tab => {
 
 
 // Message on email copy
-  function copyEmail(email) {
-    navigator.clipboard.writeText(email).then(() => {
-      const toast = document.getElementById('toast');
-      toast.classList.remove('opacity-0');
-      toast.classList.add('opacity-100');
-      setTimeout(() => {
-        toast.classList.remove('opacity-100');
-        toast.classList.add('opacity-0');
-      }, 2000);
-    });
-  }
-
-
-  // downloading toast
-
-  const toastContainer = document.getElementById('toastContainer');
-
-  function showToast(message, duration = 2000) {
-    const toast = document.createElement('div');
-    toast.className = "bg-gray-800 text-white px-4 py-2 rounded shadow-lg opacity-0 transform translate-y-2 transition-all duration-300";
-    toast.innerText = message;
-    toastContainer.appendChild(toast);
-
-    // Animate in
-    requestAnimationFrame(() => {
-      toast.classList.remove('opacity-0', 'translate-y-2');
-      toast.classList.add('opacity-100', 'translate-y-0');
-    });
-
-    // Animate out and remove
+function copyEmail(email) {
+  navigator.clipboard.writeText(email).then(() => {
+    const toast = document.getElementById('toast');
+    toast.classList.remove('opacity-0');
+    toast.classList.add('opacity-100');
     setTimeout(() => {
-      toast.classList.add('opacity-0', 'translate-y-2');
-      setTimeout(() => toast.remove(), 300);
-    }, duration);
-  }
-
-  // Attach listener to all download buttons
-  document.querySelectorAll('.download-btn').forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const href = btn.getAttribute('href') || '';
-      const filename = href.split('/').pop() || 'file';
-      showToast(`Downloading ${filename}...`);
-    });
+      toast.classList.remove('opacity-100');
+      toast.classList.add('opacity-0');
+    }, 2000);
   });
+}
+
+
+// downloading toast
+
+const toastContainer = document.getElementById('toastContainer');
+
+function showToast(message, duration = 2000) {
+  const toast = document.createElement('div');
+  toast.className = "bg-gray-800 text-white px-4 py-2 rounded shadow-lg opacity-0 transform translate-y-2 transition-all duration-300";
+  toast.innerText = message;
+  toastContainer.appendChild(toast);
+
+  // Animate in
+  requestAnimationFrame(() => {
+    toast.classList.remove('opacity-0', 'translate-y-2');
+    toast.classList.add('opacity-100', 'translate-y-0');
+  });
+
+  // Animate out and remove
+  setTimeout(() => {
+    toast.classList.add('opacity-0', 'translate-y-2');
+    setTimeout(() => toast.remove(), 300);
+  }, duration);
+}
+
+// Attach listener to all download buttons
+document.querySelectorAll('.download-btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    const href = btn.getAttribute('href') || '';
+    const filename = href.split('/').pop() || 'file';
+    showToast(`Downloading ${filename}...`);
+  });
+});
 
 
 /**
