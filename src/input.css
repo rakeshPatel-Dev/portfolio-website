@@ -25,6 +25,7 @@ a[title="Move to Top"] {
 
 .heading span {
   display: inline-block;
+  margin-right: 5px;
 }
 
 /* Parent section shadow/border */

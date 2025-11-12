@@ -1,42 +1,48 @@
-// ...Heading Animation ...
-const breakingText = () => {
-  const heading = document.querySelector('.heading');
-  if (!heading) return;
+breakingText = () => {
+const h1 = document.querySelector('h1')
+const h1Text = h1.textContent
 
-  const headingText = heading.textContent;
-  const splittedText = headingText.split("");
-  const halfVal = Math.floor(splittedText.length / 2);
+const splittedText = h1Text.split("")
 
-  let clutter = "";
+const halfVal = splittedText.length/2
 
-  splittedText.forEach((elem, index) => {
-    // preserve real spaces and render them visibly
-    const char = elem === " " ? "&nbsp;" : elem;
-    const cls = index < halfVal ? "a" : "b";
+clutter = ""
 
-    // inline-block + small right margin gives space between characters
-    clutter += `<span class="${cls}" style="display:inline-block;margin-right:0.12em">${char}</span>`;
-  });
+splittedText.forEach((elem,index) => {
+    if (index<halfVal){
+       
+        clutter +=`<span class="a">${elem}</span>`
+    }else {
+        clutter +=`<span class="b">${elem}</span>`
 
-  heading.innerHTML = clutter;
-};
+    }
+    
+})
 
+ h1.innerHTML = clutter
+}
 
-breakingText()
+ breakingText()
 
 gsap.from(".a", {
-  y: 100,
-  duration: 0.8,
-  opacity: 0,
-  stagger: 0.2
+   y:100,
+   duration:0.5,
+   opacity:0,
+   stagger:0.2
 })
 
 gsap.from(".b", {
-  y: 100,
-  duration: 0.8,
-  opacity: 0,
-  stagger: -0.2
+   y:100,
+   duration:0.5,
+   opacity:0,
+   stagger:-0.2
 })
+
+
+
+
+
+
 
 // tab switching for experience section
 
@@ -134,7 +140,7 @@ const projects = [
     liveLink: 'https://rakeshpatel-dev.github.io/todo-App/',
     sourceLink: 'https://github.com/rakeshPatel-Dev/todo-App',
     type: 'web',
-    containerSelectors: ['.parent-container', '.project-container']
+    containerSelectors: ['.project-container']
   },
   {
     image: '/assets/images/netflix clone.webp',
@@ -144,7 +150,7 @@ const projects = [
     liveLink: '#',
     sourceLink: 'https://github.com/rakeshPatel-Dev/Clone-Projects/tree/main/Netflix',
     type: 'web',
-    containerSelectors: ['.parent-container', '.project-container']
+    containerSelectors: ['.project-container']
   },
   {
     image: '/assets/images/user finder.webp',
