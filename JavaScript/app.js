@@ -103,8 +103,18 @@ containers.forEach(container => {
 const projects = [
 
   {
+    image: '/assets/images/moodymusik.webp',
+    title: 'moodyMusik - Listen to your mood',
+    description: 'A mood based playlist generator app with real-time searching and dedicated song play page.',
+    tags: ['React', 'React Router', "Tailwind CSS", "TypeScript", 'Stitch', "Frontend", "Youtube"],
+    liveLink: 'https://moodymusik.vercel.app/',
+    sourceLink: 'https://github.com/rakeshPatel-Dev/moodyMusik',
+    type: 'web', // for filtering
+    containerSelectors: ['.parent-container', ".project-container"]
+  },
+  {
     image: '/assets/images/imagetoolkit.webp',
-    title: 'Image Toolkit',
+    title: 'Image Toolkit - Solution to Images',
     description: 'An Onestop Solution for developers to resize, compress, change type and crop images.',
     tags: ['React', 'Tailwind CSS', "Shadcn UI", "TypeScript", 'Stitch', "Frontend"],
     liveLink: 'https://imagetoolkit.vercel.app/',
